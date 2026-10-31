@@ -1,0 +1,456 @@
+{
+  "n": 90,
+  "start": "2010-06-04",
+  "end": "2020-11-05",
+  "positives": 60,
+  "site": [
+    {
+      "LaunchSite": "CCAFS SLC 40",
+      "count": 55,
+      "sum": 33,
+      "mean": 0.6
+    },
+    {
+      "LaunchSite": "KSC LC 39A",
+      "count": 22,
+      "sum": 17,
+      "mean": 0.7727272727272727
+    },
+    {
+      "LaunchSite": "VAFB SLC 4E",
+      "count": 13,
+      "sum": 10,
+      "mean": 0.7692307692307693
+    }
+  ],
+  "orbit": [
+    {
+      "Orbit": "SO",
+      "mean": 0.0,
+      "size": 1
+    },
+    {
+      "Orbit": "GTO",
+      "mean": 0.5185185185185185,
+      "size": 27
+    },
+    {
+      "Orbit": "ISS",
+      "mean": 0.6190476190476191,
+      "size": 21
+    },
+    {
+      "Orbit": "MEO",
+      "mean": 0.6666666666666666,
+      "size": 3
+    },
+    {
+      "Orbit": "PO",
+      "mean": 0.6666666666666666,
+      "size": 9
+    },
+    {
+      "Orbit": "LEO",
+      "mean": 0.7142857142857143,
+      "size": 7
+    },
+    {
+      "Orbit": "VLEO",
+      "mean": 0.8571428571428571,
+      "size": 14
+    },
+    {
+      "Orbit": "HEO",
+      "mean": 1.0,
+      "size": 1
+    },
+    {
+      "Orbit": "GEO",
+      "mean": 1.0,
+      "size": 1
+    },
+    {
+      "Orbit": "ES-L1",
+      "mean": 1.0,
+      "size": 1
+    },
+    {
+      "Orbit": "SSO",
+      "mean": 1.0,
+      "size": 5
+    }
+  ],
+  "year": [
+    {
+      "Year": 2010,
+      "mean": 0.0,
+      "size": 1
+    },
+    {
+      "Year": 2012,
+      "mean": 0.0,
+      "size": 1
+    },
+    {
+      "Year": 2013,
+      "mean": 0.0,
+      "size": 3
+    },
+    {
+      "Year": 2014,
+      "mean": 0.3333333333333333,
+      "size": 6
+    },
+    {
+      "Year": 2015,
+      "mean": 0.3333333333333333,
+      "size": 6
+    },
+    {
+      "Year": 2016,
+      "mean": 0.625,
+      "size": 8
+    },
+    {
+      "Year": 2017,
+      "mean": 0.8333333333333334,
+      "size": 18
+    },
+    {
+      "Year": 2018,
+      "mean": 0.6111111111111112,
+      "size": 18
+    },
+    {
+      "Year": 2019,
+      "mean": 0.9,
+      "size": 10
+    },
+    {
+      "Year": 2020,
+      "mean": 0.8421052631578947,
+      "size": 19
+    }
+  ],
+  "missing_raw": {
+    "FlightNumber": 0,
+    "Date": 0,
+    "BoosterVersion": 0,
+    "PayloadMass": 0,
+    "Orbit": 0,
+    "LaunchSite": 0,
+    "Outcome": 0,
+    "Flights": 0,
+    "GridFins": 0,
+    "Reused": 0,
+    "Legs": 0,
+    "LandingPad": 26,
+    "Block": 0,
+    "ReusedCount": 0,
+    "Serial": 0,
+    "Longitude": 0,
+    "Latitude": 0
+  },
+  "models": [
+    {
+      "model": "Logistic regression",
+      "cv_accuracy": 0.8476190476190476,
+      "cv_std": 0.06431216387098719,
+      "test_accuracy": 0.7777777777777778,
+      "balanced_accuracy": 0.6666666666666666,
+      "f1": 0.8571428571428571,
+      "params": {
+        "model__C": 0.1
+      }
+    },
+    {
+      "model": "SVM",
+      "cv_accuracy": 0.8885714285714286,
+      "cv_std": 0.06904597699196899,
+      "test_accuracy": 0.7777777777777778,
+      "balanced_accuracy": 0.6666666666666666,
+      "f1": 0.8571428571428571,
+      "params": {
+        "model__C": 1,
+        "model__gamma": "scale",
+        "model__kernel": "rbf"
+      }
+    },
+    {
+      "model": "Decision tree",
+      "cv_accuracy": 0.8752380952380951,
+      "cv_std": 0.05007024544036159,
+      "test_accuracy": 0.8333333333333334,
+      "balanced_accuracy": 0.7916666666666666,
+      "f1": 0.88,
+      "params": {
+        "model__max_depth": 3,
+        "model__min_samples_leaf": 5
+      }
+    },
+    {
+      "model": "KNN",
+      "cv_accuracy": 0.8742857142857142,
+      "cv_std": 0.06663945022680343,
+      "test_accuracy": 0.8333333333333334,
+      "balanced_accuracy": 0.75,
+      "f1": 0.8888888888888888,
+      "params": {
+        "model__n_neighbors": 5,
+        "model__weights": "distance"
+      }
+    }
+  ],
+  "best": {
+    "model": "SVM",
+    "cv_accuracy": 0.8885714285714286,
+    "cv_std": 0.06904597699196899,
+    "test_accuracy": 0.7777777777777778,
+    "balanced_accuracy": 0.6666666666666666,
+    "f1": 0.8571428571428571,
+    "params": {
+      "model__C": 1,
+      "model__gamma": "scale",
+      "model__kernel": "rbf"
+    }
+  },
+  "confusion": [
+    [
+      2,
+      4
+    ],
+    [
+      0,
+      12
+    ]
+  ],
+  "chronological": {
+    "accuracy": 0.8888888888888888,
+    "majority_baseline": 0.8333333333333334,
+    "confusion": [
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        15
+      ]
+    ],
+    "note": "Secondary sensitivity check after model selection, not a second untouched test."
+  },
+  "sql": {
+    "Unique sites": [
+      {
+        "Launch_Site": "CCAFS LC-40"
+      },
+      {
+        "Launch_Site": "CCAFS SLC-40"
+      },
+      {
+        "Launch_Site": "KSC LC-39A"
+      },
+      {
+        "Launch_Site": "VAFB SLC-4E"
+      }
+    ],
+    "First five CCA records": [
+      {
+        "Date": "2010-06-04",
+        "Booster_Version": "F9 v1.0  B0003",
+        "Launch_Site": "CCAFS LC-40"
+      },
+      {
+        "Date": "2010-12-08",
+        "Booster_Version": "F9 v1.0  B0004",
+        "Launch_Site": "CCAFS LC-40"
+      },
+      {
+        "Date": "2012-05-22",
+        "Booster_Version": "F9 v1.0  B0005",
+        "Launch_Site": "CCAFS LC-40"
+      },
+      {
+        "Date": "2012-10-08",
+        "Booster_Version": "F9 v1.0  B0006",
+        "Launch_Site": "CCAFS LC-40"
+      },
+      {
+        "Date": "2013-03-01",
+        "Booster_Version": "F9 v1.0  B0007",
+        "Launch_Site": "CCAFS LC-40"
+      }
+    ],
+    "NASA CRS payload": [
+      {
+        "payload_kg": 45596
+      }
+    ],
+    "All NASA-related payload": [
+      {
+        "payload_kg": 107010
+      }
+    ],
+    "F9 v1.1 average payload": [
+      {
+        "average_kg": 2534.6666666666665
+      }
+    ],
+    "First successful ground landing": [
+      {
+        "first_date": "2015-12-22"
+      }
+    ],
+    "Drone landings with 4000-6000 kg": [
+      {
+        "Booster_Version": "F9 FT B1022",
+        "kg": 4696
+      },
+      {
+        "Booster_Version": "F9 FT B1026",
+        "kg": 4600
+      },
+      {
+        "Booster_Version": "F9 FT  B1021.2",
+        "kg": 5300
+      },
+      {
+        "Booster_Version": "F9 FT  B1031.2",
+        "kg": 5200
+      }
+    ],
+    "Mission outcome counts": [
+      {
+        "Mission_Outcome": "Failure (in flight)",
+        "count": 1
+      },
+      {
+        "Mission_Outcome": "Success",
+        "count": 99
+      },
+      {
+        "Mission_Outcome": "Success (payload status unclear)",
+        "count": 1
+      }
+    ],
+    "Maximum payload boosters": [
+      {
+        "Booster_Version": "F9 B5 B1048.4",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1049.4",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1051.3",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1056.4",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1048.5",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1051.4",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1049.5",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1060.2",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1058.3",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1051.6",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1060.3",
+        "kg": 15600
+      },
+      {
+        "Booster_Version": "F9 B5 B1049.7",
+        "kg": 15600
+      }
+    ],
+    "2015 drone landing failures": [
+      {
+        "Date": "2015-01-10",
+        "Booster_Version": "F9 v1.1 B1012",
+        "Launch_Site": "CCAFS LC-40"
+      },
+      {
+        "Date": "2015-04-14",
+        "Booster_Version": "F9 v1.1 B1015",
+        "Launch_Site": "CCAFS LC-40"
+      }
+    ],
+    "Landing outcome ranks": [
+      {
+        "Landing_Outcome": "No attempt",
+        "count": 10
+      },
+      {
+        "Landing_Outcome": "Failure (drone ship)",
+        "count": 5
+      },
+      {
+        "Landing_Outcome": "Success (drone ship)",
+        "count": 5
+      },
+      {
+        "Landing_Outcome": "Controlled (ocean)",
+        "count": 3
+      },
+      {
+        "Landing_Outcome": "Success (ground pad)",
+        "count": 3
+      },
+      {
+        "Landing_Outcome": "Failure (parachute)",
+        "count": 2
+      },
+      {
+        "Landing_Outcome": "Uncontrolled (ocean)",
+        "count": 2
+      },
+      {
+        "Landing_Outcome": "Precluded (drone ship)",
+        "count": 1
+      }
+    ],
+    "Site success rates": [
+      {
+        "Launch_Site": "CCAFS LC-40",
+        "launches": 26,
+        "successful_landings": 6
+      },
+      {
+        "Launch_Site": "CCAFS SLC-40",
+        "launches": 34,
+        "successful_landings": 25
+      },
+      {
+        "Launch_Site": "KSC LC-39A",
+        "launches": 25,
+        "successful_landings": 20
+      },
+      {
+        "Launch_Site": "VAFB SLC-4E",
+        "launches": 16,
+        "successful_landings": 10
+      }
+    ]
+  },
+  "sql_rows": 101
+}
